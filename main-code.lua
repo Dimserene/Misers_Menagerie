@@ -177,20 +177,13 @@ SMODS.Joker {
 --			end
 --		end
 		local check = true
-		if context.cardarea == G.jokers and context.before and not context.blueprint then
+		if context.cardarea == G.jokers and context.joker_main and not context.blueprint then
 			if context.scoring_hand then
 				for k, v in ipairs(context.full_hand) do
-					if
-						v:get_id() == 2
-						or v:get_id() == 3
-						or v:get_id() == 5
-						or v:get_id() == 6
-						or v:get_id() == 7
-						or v:get_id() == 8
-						or v:get_id() == 10
-						or v:get_id() == 11
-						or v:get_id() == 12
-						or v:get_id() == 13
+					if not
+						(v:get_id() == 4
+						or v:get_id() == 9
+						or v:get_id() == 14)
 					then
 						check = false
 						break
