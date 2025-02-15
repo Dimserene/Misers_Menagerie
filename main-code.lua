@@ -12,7 +12,6 @@ SMODS.Atlas{
     path = 'Tarots.png',
     px = 71,
     py = 95,
-    prefix_config = { key = false }
 }
 
 SMODS.Atlas{
@@ -20,7 +19,6 @@ SMODS.Atlas{
     path = 'Jokers.png',
     px = 71,
     py = 95,
-    prefix_config = { key = false }
 }
 
 SMODS.Atlas({
@@ -356,18 +354,37 @@ SMODS.Consumable {
 	loc_txt = {
 		name = "Wheel of Fortune*",
 		text = {
-		"{C:green}#1# in #2#{} chance to add",
-        	"{C:dark_edition}Foil{}, {C:dark_edition}Holographic{}, or",
-                "{C:dark_edition}Polychrome{} edition",
-                "to a random {C:attention}Joker",
-		"...",
-		"{s:0.5}And a {C:green}#1# in #2#{} chance to{}",
-		"{s:0.5}destroy a random joker.{}",
-		"{s:0.5}This is why you read the fine print!{}",
+			"{C:green}#1# in #2#{} chance to add",
+        		"{C:dark_edition}Foil{}, {C:dark_edition}Holographic{}, or",
+        	        "{C:dark_edition}Polychrome{} edition",
+        	        "to a random {C:attention}Joker",
+			"...",
+			"{s:0.5}And a {C:green}#1# in #2#{} chance to{}",
+			"{s:0.5}destroy a random joker.{}",
+			"{s:0.5}This is why you read the fine print!{}",
 		}
 	},
+	config = { extra = { extra = 4 } },
 	atlas = 'Tarot',
 	pos = { x = 6, y = 5 },
+	permaeternal = true,
+	cost = 3,
+	hidden = true,
+}
+
+SMODS.Consumable {
+	key = 'nothingness',
+	loc_txt = {
+		name = "...",
+		text = {
+			"Does nothing. Like... literally nothing.",
+			"Yep. Nothing to be found here.",
+			"You've found the most useless card in this mod.",
+		}
+	},
+	config = { extra = { } },
+	atlas = 'Tarot',
+	pos = { x = 7, y = 5 },
 	permaeternal = true,
 	cost = 3,
 	hidden = true,
