@@ -164,16 +164,16 @@ SMODS.Joker {
     		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod, card.ability.extra.x_mult } }
   	end,
 	calculate = function(self, card, context)
---		local check = true
---		if context.individual and context.cardarea == G.play and context.other_card:is_suit('Spades') then
---			if context.other_card:get_id() == 14 then
---				return {
---					x_mult = card.ability.extra.x_mult,
---					colour = G.C.RED,
---					card = card,
---				}
---			end
---		end
+		local check = true
+		if context.individual and context.cardarea == G.play and context.other_card:is_suit('Spades') then
+			if context.other_card:get_id() == 14 then
+				return {
+					x_mult = card.ability.extra.x_mult,
+					colour = G.C.RED,
+					card = card,
+				}
+			end
+		end
 		local check = true
 		if context.cardarea == G.jokers and context.joker_main and not context.blueprint then
 			if context.scoring_hand then
@@ -364,7 +364,7 @@ SMODS.Consumable {
 			"{s:0.5}This is why you read the fine print!{}",
 		}
 	},
-	config = { extra = { extra = 4 } },
+	config = { extra = { odds = 4 } },
 	atlas = 'Tarot',
 	pos = { x = 6, y = 5 },
 	permaeternal = true,
